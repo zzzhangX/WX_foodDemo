@@ -1,0 +1,58 @@
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header view {
+  position: relative;
+}
+
+.header image {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.header view input {
+  background-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  padding: 8px 35px;
+}
+
+.header text {
+  padding: 8px 0;
+  vertical-align: middle;
+}
+.content{
+  padding: 0 10px
+}
+
+.myCollect{
+  display: flex;
+  align-content: center;
+  background-color: white;
+}
+.photo{
+  padding: 10px 0;
+}
+.photo image{
+  /* outline: 1px solid red; */
+  width: 150px;
+  height: 100px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.details view:nth-child(1){
+  font-size: 16px
+}
+.details view:nth-child(2),.details view:nth-child(3){
+  font-size: 12px;
+  color: gray;
+}

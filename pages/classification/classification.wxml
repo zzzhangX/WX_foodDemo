@@ -1,0 +1,17 @@
+<!--pages/classification/classification.wxml-->
+<view class='content'>
+  <block wx:for='{{classification}}' wx:key=''>
+    <view class='classfication'>
+      <view class='title'>
+        <text>{{item.title}}</text>
+      </view>
+      <view class='sumChoose'>
+      <block  wx:for='{{item.sumChoose}}'  wx:key=''>
+        <view class='{{item.itemClass}}' id='{{item.name}}' bindtap='tosearch'>
+          {{item.name}}
+        </view>
+      </block>
+      </view>
+    </view>
+  </block>
+</view>

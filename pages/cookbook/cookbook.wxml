@@ -1,0 +1,56 @@
+<view class='content'>
+  <view class='header'>
+    <image src='{{cookbook.headimg}}'></image>
+  </view>
+  <view>
+    <view class='title'>
+      {{cookbook.title}}
+    </view>
+    <view class='looksman'>
+      {{cookbook.looksman}}
+    </view>
+    <view class='intro'>
+      {{cookbook.intro}}
+    </view>
+    <view class='writeby'>
+      {{cookbook.writeby}}
+    </view>
+  </view>
+
+  <view class='foodmenu'>
+    <view class='heading'>—— 食材清单 ——</view>
+    <block wx:for='{{cookbook.foodmenu}}' wx:key=''>
+      <view class='item'>
+        <text class='name'>{{item.name}}</text>
+        <text class='weight'>{{item.weight}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class='step'>
+    <view class='heading'>—— 烹饪步骤 ——</view>
+    <block wx:for='{{cookbook.step}}' wx:key=''>
+      <view class='stepitem'>
+        <image src='{{item.img}}' mode='aspectFill'></image>
+        <text class='num'>{{item.num}}</text>
+        <text class='stepintro'>{{item.intro}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class='fixed'>
+  <view bindtap='backtohome'>
+    <image src='../../images/shouye.png' mode='aspectFit'></image>
+    <text>首页</text>
+  </view>
+  <view bindtap='collect'>
+    <image src='../../images/collect.png' mode='aspectFit'></image>
+    <text>{{collecttext}}</text>
+  </view>
+  <view bindtap='shareFood'>
+    <image src='../../images/share.png' mode='aspectFit'></image>
+    <text>分享</text>
+  </view>
+</view>

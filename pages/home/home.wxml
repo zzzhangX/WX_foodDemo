@@ -1,0 +1,61 @@
+<view class='myApp'>
+  <view class='header'>
+    <image src='../../images/search.png' mode='aspectFit' wx:if='{{searchIcon}}'></image>
+    <input placeholder='搜你想吃的' placeholder-class="place-holder" bindfocus='mySeach' bindblur='searchBlur' value='{{searchcontent}}' bindinput='getValue'></input>
+    <input value='搜索' disabled bindtap='tosearch'></input>
+  </view>
+  <view class='hotsearch'>
+    <view class='hotTitle'>
+      <text>-热门搜索-</text>
+    </view>
+    <view class='choose'>
+      <block wx:for="{{foodArray}}" wx:key=''>
+        <view class='item-food' id='{{item.food}}' bindtap='myselect'>
+          <text>{{item.food}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='selected'>
+    <view class='selectedTitle'>
+      <text>-今日编辑精选-</text>
+    </view>
+    <!-- 循环内容 -->
+    <block wx:for="{{storeArr}}" wx:key=''>
+      <view class='store'>
+        <view class='storeIntro'>
+          <text>{{item.storeIntro}}</text>
+        </view>
+        <view class='storeTitle'>
+          <view>{{item.storeTitle}}</view>
+          <view class='myRecord'>
+            <view class='test'>
+              <image src='../../images/look.png' mode='scaleToFill'></image>
+              <text>{{item.sumSee}}</text>
+            </view>
+             <view class='test'>
+              <image src='../../images/shoucang1.png' mode='scaleToFill'></image>
+              <text>{{item.collection}}</text>
+            </view>
+          </view>
+        </view>
+        <view>
+          <!-- 嵌套的for循环 -->
+          <block wx:for="{{item.imgArr}}" wx:key=''>
+            <view id='{{item.id}}' class='foodBox' bindtap='openFood'>
+              <image src='{{item.src}}' mode='scaleToFill'></image>
+              <view class='myIntro'>
+                <view class='foodIntro'>
+                  <text>{{item.foodIntro}}</text>
+                </view>
+                <view class='sumFood'>
+                  <text>{{item.sumFood}}</text>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

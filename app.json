@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/classification/classification",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/collection/Collection",
+    "pages/cookbook/cookbook",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "豆果美食",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/home1.png",
+        "selectedIconPath": "images/home2.png",
+        "selectedColor": "black"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "images/fenlei1.png",
+        "selectedIconPath": "images/fenlei2.png",
+        "selectedColor": "black"
+      },
+      {
+        "pagePath": "pages/collection/Collection",
+        "text": "收藏",
+        "iconPath": "images/shoucang1.png",
+        "selectedIconPath": "images/shoucang2.png",
+        "selectedColor": "black"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+<view class='body'>
+  <view class='header'>
+    <view>
+      <image src='../../images/search.png'></image>
+      <input class='' value='{{searchValue}}' bindinput='getValue'></input>
+    </view>
+    <text bindtap='search'>搜索</text>
+  </view>
+  <view class='content'>
+
+    <block wx:for='{{searchArr}}' wx:key=''>
+      <view class='myCollect' id='{{item.id}}' bindtap='openFood'>
+        <view class='photo'>
+          <image src='{{item.headimg}}' mode='aspectFit'></image>
+        </view>
+        <view class='details'>
+          <view>{{item.title}}</view>
+          <view>{{item.writeby}}</view>
+          <view>{{item.looksman}}</view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+
+</view>
